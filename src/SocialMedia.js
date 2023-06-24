@@ -1,4 +1,4 @@
-import "./App.css";
+import "./SocialMedia.css";
 import Homepage from "./Homepage";
 import Authenticate from "./authenticate/Authenticate";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { auth } from "./firebase";
 import { loginUser, setLoading } from "./features/userSlice";
 
-function App() {
+function SocialMedia() {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function App() {
   const user = useSelector((state) => state.data.user.user);
   const isLoading = useSelector((state) => state.data.user.isLoading);
   return (
-    <div className="app">
+    <div className="kris-theme">
       {isLoading ? (
         <div class="loader-container">
           <div class="loader"></div>
@@ -42,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default SocialMedia;
