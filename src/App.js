@@ -1,8 +1,9 @@
 import "./App.css";
-import Homepage from "./Homepage";
+import Navbar from "./components/Navbar";
 import Authenticate from "./authenticate/Authenticate";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import React, { useEffect } from "react";
 import { auth } from "./firebase";
 import { loginUser, setLoading } from "./features/userSlice";
 
@@ -36,7 +37,15 @@ function App() {
           <div class="loader"></div>
         </div>
       ) : (
-        <>{user ? <Homepage /> : <Authenticate />}</>
+        <>
+          {user ? (
+            <div>
+              <Navbar /> <Outlet />
+            </div>
+          ) : (
+            <Authenticate />
+          )}
+        </>
       )}
     </div>
   );

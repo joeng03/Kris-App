@@ -1,5 +1,6 @@
 import React from "react";
 import "./Sidenav.css";
+import StorefrontIcon from "@mui/icons-material/Storefront";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
 import ExploreIcon from "@mui/icons-material/Explore";
@@ -13,6 +14,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "firebase/auth";
 import { logoutUser } from "../features/userSlice";
 import { auth } from "../firebase";
+import { Link } from "react-router-dom";
 
 function Sidenav() {
   const user = useSelector((state) => state.data.user.user);
@@ -23,17 +25,21 @@ function Sidenav() {
   };
   return (
     <div className="sidenav">
-      <img
-        className="sidenav__logo"
-        src="https://play-lh.googleusercontent.com/0eU_ZA3vyWBFx0QT0YvV7PCzFIK9yiVsfbfQ2V6q6RIzg98EPMbTGt6P2G9j_CjRpQ"
-        alt="Instagram Logo"
-      />
+      <Link to="/">
+        <img
+          className="sidenav__logo"
+          src="https://play-lh.googleusercontent.com/0eU_ZA3vyWBFx0QT0YvV7PCzFIK9yiVsfbfQ2V6q6RIzg98EPMbTGt6P2G9j_CjRpQ"
+          alt="Instagram Logo"
+        />
+      </Link>
 
       <div className="sidenav__buttons">
-        <button className="sidenav__button">
-          <HomeIcon />
-          <span>Home</span>
-        </button>
+        <Link to="/">
+          <button className="sidenav__button">
+            <StorefrontIcon />
+            <span>Main Page</span>
+          </button>
+        </Link>
         <button className="sidenav__button">
           <SearchIcon />
           <span>Search</span>

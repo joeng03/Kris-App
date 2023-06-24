@@ -1,0 +1,38 @@
+  
+  .auth-form-container, .login-form {
+    justify-content: center;
+    display: grid;
+    text-align: center;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .auth-form-container {
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 0.5rem;
+    }
+  }
+  
+  label {
+    text-align: center;
+    padding: 0.25rem 0;
+  }
+  
+  input {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  
+  button {
+    font-size: 20px;
+    border: none;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  
+ 
