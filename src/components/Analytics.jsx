@@ -254,7 +254,7 @@ const Analytics = () => {
   }
   
   return (
-<div class="grid-container">
+<div class="grid-container mainpage-theme">
   <div class="grid-item">
    <Chart
      options={areaChartState.options}

@@ -11,7 +11,7 @@ function Authenticate() {
   };
 
   return (
-    <div className="authenticate">
+    <div className="authenticate kris-theme">
       <div className="auth__left">
         <img
           src="https://is4-ssl.mzstatic.com/image/thumb/Purple114/v4/63/29/b9/6329b914-94dc-12ae-2d34-43389791ae7c/642a82eb-22bd-4aa3-a585-8792018d7d23_iPhone-8_v2_01.png/750x750bb.jpeg"
