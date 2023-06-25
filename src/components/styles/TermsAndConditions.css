@@ -7,6 +7,13 @@
     text-align: center;
 }
 
+.a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
 .sigContainer {
     width: 80%;
     height: 80%;

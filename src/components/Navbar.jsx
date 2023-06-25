@@ -21,7 +21,9 @@ const Navbar = () => {
           <li>
             <Link to="/social">Kris+ Social</Link>
           </li>
-
+          <li>
+            <Link to="/Login">Log out</Link>
+          </li>
         </ul>
       </nav>
     </div>

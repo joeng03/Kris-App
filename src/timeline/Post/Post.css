@@ -1,6 +1,7 @@
 .post {
   width: 550px;
   margin: 30px 40px 50px 40px;
+  border: 1px solid black;
 }
 
 .post__header {
@@ -16,6 +17,7 @@
   flex-direction: row;
   align-items: center;
   font-weight: bolder;
+  color: black;
 }
 
 .post__headerAuthor > span {
@@ -37,6 +39,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  color: black;
 }
 
 .postIcon {

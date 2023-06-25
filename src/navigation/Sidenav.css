@@ -14,13 +14,14 @@
 .sidenav__buttons {
   display: flex;
   flex-direction: column;
+  border: 1px solid black;
 }
 
 .sidenav__button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: white;
+  color: black;
   background: 0;
   border: 0;
   margin: 5px 10px 5px 10px;
@@ -43,13 +44,14 @@
 .sidenav__more {
   position: fixed;
   bottom: 3px;
+  border: 1px solid black;
 }
 
 .logout__button {
   font-size: 15px;
   border-radius: 10px;
   font-weight: bold;
-  color: white;
+  color: black;
   background-color: rgba(255, 255, 255, 0.211);
   border: 0;
   padding: 10px;

@@ -52,6 +52,10 @@ const TermsAndConditions = () => {
                 <SignatureCanvas canvasProps={{ className: 'sigCanvas' }} ref={(ref) => { sigPad = ref }} />
             </div>
 
+            <div className="a">
+                <button>Submit</button>
+            </div>
+
             <button onClick={clear}>
                 Clear
             </button>

@@ -36,26 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.kris-theme {
-  background-color:black;
-  background-image: linear-gradient( #00246B,  #D06112);
-  color: white;
-}
-
-.loader-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.loader {
-  border: 8px solid rgba(0, 0, 0, 0.1);
-  border-top: 8px solid #3498db;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  animation: spin 1s ease-in-out infinite;
-}
-

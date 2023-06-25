@@ -31,7 +31,7 @@ function App() {
   const user = useSelector((state) => state.data.user.user);
   const isLoading = useSelector((state) => state.data.user.isLoading);
   return (
-    <div>
+    <div className="app">
       {isLoading ? (
         <div class="loader-container">
           <div class="loader"></div>
@@ -39,7 +39,7 @@ function App() {
       ) : (
         <>
           {user ? (
-            <div className="mainpage-theme">
+            <div>
               <Navbar /> <Outlet />
             </div>
           ) : (
