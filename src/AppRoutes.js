@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import SocialMedia from "./SocialMedia";
-import Home from "./components/Home";
 import Login from "./authenticate/Login";
 import Signup from "./authenticate/Signup";
 import TermsAndConditions from "./components/TermsAndConditions";
