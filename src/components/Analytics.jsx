@@ -204,6 +204,7 @@ const Analytics = () => {
 
   const [cityCode, setCityCode] = React.useState("");
   const [topDestinations, setTopDestinations] = React.useState([]);
+  const [pointsOfInterests, setPointsOfInterests] = React.useState([]);
   useEffect(
     () => {
       getTopDestinations();
@@ -226,8 +227,7 @@ const Analytics = () => {
 
   const getTopDestinations = async (cityCode)=>{
       const accessToken = await getAccessToken();
-      console.log(accessToken)
-      fetch(AMAEDEUS_BASE_URL + "reference-data/recommended-locations?cityCodes=HAN", {
+      fetch(AMAEDEUS_BASE_URL + "recommended-locations?cityCodes=HAN", {
         method: "GET",
         headers:{
           "Authorization" : "Bearer " + accessToken
@@ -238,9 +238,20 @@ const Analytics = () => {
         .catch(error => {
           console.error(error);
         });
-      }
-  
 
+      fetch(AMAEDEUS_BASE_URL + "locations/pois/by-square?north=13.023577&west=77.536856&south=12.923210&east=77.642256&page%5Blimit%5D=10&page%5Boffset%5D=0", {
+          method: "GET",
+          headers:{
+            "Authorization" : "Bearer " + accessToken
+          }
+          })
+          .then(response => response.json())
+          .then(res=> setPointsOfInterests(res.data))
+          .catch(error => {
+            console.error(error);
+          });
+
+  }
   
   return (
 <div class="grid-container">
@@ -258,13 +269,7 @@ const Analytics = () => {
          type="bar"
        />
       </div>
-  <div class="grid-item">
-    <Chart
-        options={donutChartState.options}
-        series={donutChartState.series}
-        type="donut" 
-       />
-  </div>
+
   <div class="grid-item">
     <Chart 
         options={columnChartState.options}
@@ -272,6 +277,13 @@ const Analytics = () => {
         type="bar"
       />
     </div>
+    <div class="grid-item">
+    <Chart
+        options={donutChartState.options}
+        series={donutChartState.series}
+        type="donut" 
+       />
+  </div>
   <div class="grid-item">
   <p>Tourists who travel here are also interested in: </p>
     {topDestinations.map(
@@ -284,7 +296,14 @@ const Analytics = () => {
     )}
   </div>
     <div class="grid-item">
-    
+      <p>Points of interests in Bangalore</p>
+    {pointsOfInterests.map(
+      (point)=>(
+        <div>
+          <span>{point.name }</span> {" "}
+        </div>
+      )
+    )}
     </div>
     
 </div>

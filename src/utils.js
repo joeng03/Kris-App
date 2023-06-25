@@ -3,7 +3,8 @@
 export const AMADEUS_AUTH_URL =
   "https://test.api.amadeus.com/v1/security/oauth2/token";
 
-export const AMAEDEUS_BASE_URL = "https://test.api.amadeus.com/v1/";
+export const AMAEDEUS_BASE_URL =
+  "https://test.api.amadeus.com/v1/reference-data/";
 export const HEADERS = {
   "Content-Type": "application/x-www-form-urlencoded",
 };
