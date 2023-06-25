@@ -1,6 +1,6 @@
 import { AMADEUS_AUTH_URL, AMAEDEUS_BASE_URL, HEADERS, CREDENTIALS, formatAsPercent} from "../utils";
 import "./styles/Analytics.css";
-import React, {useState, useEffect, useCallback} from "react";
+import React, { useState, useEffect} from "react";
 import Chart from "react-apexcharts";
 
 function generateDayWiseTimeSeries(baseval, count, yrange) {
@@ -202,9 +202,9 @@ const Analytics = () => {
     },
   }
 
-  const [cityCode, setCityCode] = React.useState("");
-  const [topDestinations, setTopDestinations] = React.useState([]);
-  const [pointsOfInterests, setPointsOfInterests] = React.useState([]);
+  const [cityCode, setCityCode] = useState("");
+  const [topDestinations, setTopDestinations] = useState([]);
+  const [pointsOfInterests, setPointsOfInterests] = useState([]);
   useEffect(
     () => {
       getTopDestinations();

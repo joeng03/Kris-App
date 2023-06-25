@@ -26,7 +26,7 @@ function App() {
         console.log("User is not logged in.");
       }
     });
-  }, []);
+  }, [dispatch]);
 
   const user = useSelector((state) => state.data.user.user);
   const isLoading = useSelector((state) => state.data.user.isLoading);
